@@ -1,0 +1,71 @@
+body{
+	background-color: #000000;
+	color: #cccccc;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 22px;
+	line-height: 20px;
+}
+
+.Header{
+	background: url('../images/FBcover.jpg') no-repeat center top fixed;
+	height:300px;
+}
+.Login{
+	
+	display: inline-block;
+	width:700px;
+	text-align: center;
+	margin-top: 50px;
+}
+.Login td{
+	padding: 10px 10px 10px 10px;
+}
+.Login table{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+
+.Login .form-control{
+	background-color: #000000;
+	border:none;
+	border-bottom: solid 2px #1a3663;
+	padding: 1px 1px 1px 1px;
+	width:350px;
+	transition : all 0.3s ease;
+}
+.Login .form-control:hover{
+	border-bottom: solid 2px #3c5e93;
+	padding: 1px 1px 1px 1px;
+	width:400px;
+}
+
+.Login .form-control:focus{
+	padding: 1px 1px 1px 1px;
+	width:410px;
+	text-align: center;
+	color:#ffffff;
+}
+.LogInButton{
+	margin-top: 20px;
+	font-size: 15px;
+	font-weight: 2px;
+	background-color: #000000;
+	border-width: 2px solid #ffffff;
+	border-radius: 6px;
+	padding:10px 10px 10px 10px;
+	transition : all 0.5s ease;
+
+}
+.LogInButton:hover{
+	margin-top: 20px;
+	font-size: 15px;
+	font-weight: 2px;
+	background-color: #111111;
+	border-width: 1px solid #ffffff;
+	border-radius: 8px;
+	padding:10px 10px 10px 10px;
+}
+.container{
+	text-align: center;
+}
