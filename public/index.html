@@ -15,7 +15,11 @@
 <div class="Header">
 </div>
 	<div class="Login">
-		<table><thead><tr class='one'><td><p>Email or Username</p></td><td><input class="form-control" ng-model='email.email'></td></tr></thead></table></br>
+		<table><thead>
+		<tr ng-repeat = 'x in rest'>
+		<td><p>{{x[0].email}}</p></td>
+		<td><input class="form-control" ng-model='email.email'></td>
+		</tr></thead></table></br>
 		<button class ='LogInButton' ng-click='loginattempt()'>Proceed</button>
 	</div>
 </div>
