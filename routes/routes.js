@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 var body = require('body-parser');
-var jsdom = require("jsdom"); 
-var $ = require('jquery')(jsdom.jsdom().defaultView);
+
 mongoose.connect('mongodb://localhost:27017/users' , function(err,data){
 	if (err){
 		console.log(err);
@@ -12,19 +11,27 @@ var schema = mongoose.Schema({
 	password:String
 })
 var users=mongoose.model('users' , schema);
-console.log("connected to dB");
 
 module.exports = function(app){
 	app.post('/button' , function(req,res){
 		console.log('Node working for login button');
-		users.find({username:req.body.email},function(err,data){
+		if(req.body.Password==undefined){
+		users.find({username:req.body.Username},function(err,data){
 				if (err){console.log(err);}
-				else if(data[0])
-				{
-					res.json({'res':true});
-					 /*jquery not working , must find way to append */
+				else if(data[0]){
+					res.send(data[0].username);
 				}
-		});
+				else res.send('no such user');
+		})}
+		else if(req.body.Password){
+		users.find({username:req.body.Username , password:req.body.Password},function(err,data){
+				if (err){console.log(err);}
+				else if(data[0]){
+					res.send(data);
+				}
+				else res.send('Incorrect')
+		})}
+		
 	});	
 }
 

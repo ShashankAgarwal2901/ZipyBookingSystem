@@ -1,7 +1,7 @@
 body{
 	background-color: #000000;
 	color: #cccccc;
-	font-family: 'Source Code Pro';
+	font-family: 'Ubuntu';
 	font-size: 22px;
 	line-height: 20px;
 }
@@ -32,6 +32,7 @@ body{
 	border-bottom: solid 2px #1a3663;
 	padding: 1px 1px 1px 1px;
 	width:350px;
+	text-align: center;
 	transition : all 0.3s ease;
 }
 .Login .form-control:hover{
@@ -43,11 +44,11 @@ body{
 .Login .form-control:focus{
 	padding: 1px 1px 1px 1px;
 	width:410px;
-	text-align: center;
 	color:#ffffff;
 }
 .LogInButton{
 	margin-top: 20px;
+	margin-bottom: 40px;
 	font-size: 15px;
 	font-weight: 2px;
 	background-color: #000000;
